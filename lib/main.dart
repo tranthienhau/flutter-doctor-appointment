@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'DocBook',
+      title: 'MedConnect',
       theme: AppTheme.light,
       routerConfig: _router,
     );
