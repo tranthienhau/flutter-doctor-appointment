@@ -31,7 +31,7 @@ void main() {
 
     // Tap Book Appointment -> calendar booking screen.
     final book = find.text('Book Appointment');
-    await tester.ensureVisible(book);
+    await tester.scrollUntilVisible(book, 300, scrollable: find.byType(Scrollable).first);
     await tester.pump(const Duration(milliseconds: 200));
     await tester.tap(book, warnIfMissed: false);
     await tester.pump(const Duration(milliseconds: 700));
@@ -39,7 +39,7 @@ void main() {
 
     // Select a time slot to populate the booking state.
     final slot = find.text('10:00 AM');
-    await tester.ensureVisible(slot);
+    await tester.scrollUntilVisible(slot, 300, scrollable: find.byType(Scrollable).first);
     await tester.pump(const Duration(milliseconds: 200));
     await tester.tap(slot, warnIfMissed: false);
     await tester.pump(const Duration(milliseconds: 400));
